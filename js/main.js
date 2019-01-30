@@ -35,6 +35,7 @@ var completeTransaction = function() {
   document.getElementById('balance').innerHTML = balance;
 
   // 3. IF the balance is less than 0, make the balance red, else make it black
+  // A) change the style.color of the balance
   // if (balance <= 0){
   //   document.getElementById('balance').style.color = "red";
   //
@@ -42,6 +43,7 @@ var completeTransaction = function() {
   // else if (balance >= 0){
   //   document.getElementById('balance').style.color = 'black';
   // }
+  // B) create a css class and .add() a class to the balance
 let balance1 = document.getElementById('balance').classList;
 
   if (balance <= 0){
@@ -52,8 +54,8 @@ let balance1 = document.getElementById('balance').classList;
   else if (balance >= 0){
     balance1.remove('color');
   }
-        // A) change the style.color of the balance
-        // B) create a css class and .add() a class to the balance
+
+
 };
 
 document.getElementById('process').addEventListener('click', completeTransaction);
